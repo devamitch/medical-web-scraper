@@ -1,0 +1,20 @@
+{
+  "session_id": "20250523_183418",
+  "start_time": "2025-05-23T18:34:10.684274",
+  "end_time": "2025-05-23T18:34:18.521952",
+  "duration_seconds": 7.83768,
+  "pages_crawled": 0,
+  "links_found": 0,
+  "images_downloaded": 0,
+  "files_downloaded": 0,
+  "errors": 0,
+  "domains_crawled": [],
+  "configuration": {
+    "max_depth": 10,
+    "max_pages_per_domain": 5000,
+    "request_delay": 1,
+    "max_threads": 4,
+    "respect_robots": true,
+    "use_selenium": true
+  }
+}

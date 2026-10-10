@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds & caches
+.next/
+dist/
+build/
+out/
+target/
+.expo/
+.cache/
+android/build/
+android/app/build/
+android/.gradle/
+android/app/.cxx/
+ios/build/
+ios/Pods/
+
+# Binaries & packages
+*.apk
+*.aab
+*.dmg
+*.so
+*.ipa
+*.tar.gz
+*.zip
+*.asar
+
+# Lockfiles & logs
+*.log
+.DS_Store
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb
+
+# Environment & Credentials
+.env
+.env.local
+.env*.local
+!.env.example

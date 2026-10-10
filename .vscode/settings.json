@@ -1,0 +1,571 @@
+{
+  // ============================================================
+  // SETU — VS CODE PROJECT SETTINGS
+  // Android-first Expo React Native / TypeScript / Kotlin
+  // ============================================================
+
+  // ------------------------------------------------------------
+  // WORKBENCH / THEME
+  // ------------------------------------------------------------
+
+  "workbench.colorTheme": "Monokai",
+  "workbench.iconTheme": "vs-seti",
+
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+
+  // ------------------------------------------------------------
+  // EDITOR TYPOGRAPHY
+  // ------------------------------------------------------------
+
+  "editor.fontFamily": "'Fira Code', 'JetBrains Mono', Menlo, monospace",
+  "editor.fontLigatures": true,
+
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "editor.hover.enabled": "on",
+  "editor.hover.delay": 200,
+  "editor.hover.sticky": true,
+
+  "editor.cursorBlinking": "smooth",
+
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "selection",
+  "editor.renderControlCharacters": false,
+
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  "editor.stickyScroll.enabled": true,
+
+  "editor.linkedEditing": true,
+
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+
+  // ------------------------------------------------------------
+  // SAVE / CODE ACTIONS
+  // ------------------------------------------------------------
+  //
+  // IMPORTANT:
+  // Do not automatically reorganize imports or mutate source files
+  // while an agent is writing them.
+  //
+  // Explicit means:
+  // run only when VS Code explicitly requests the action.
+  //
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports.ts": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // ------------------------------------------------------------
+  // TYPESCRIPT
+  // ------------------------------------------------------------
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.disableAutomaticTypeAcquisition": false,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+
+  // ------------------------------------------------------------
+  // JAVASCRIPT / TYPESCRIPT FILE-SPECIFIC SETTINGS
+  // ------------------------------------------------------------
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+
+  // ------------------------------------------------------------
+  // ESLINT
+  // ------------------------------------------------------------
+
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.format.enable": false,
+
+  "eslint.codeActionsOnSave.mode": "problems",
+
+  "eslint.alwaysShowStatus": true,
+
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+
+  "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+
+  // ------------------------------------------------------------
+  // KOTLIN
+  // ------------------------------------------------------------
+
+  "files.associations": {
+    "*.kt": "kotlin",
+    "*.kts": "kotlin"
+  },
+
+  "kotlin.languageServer.enabled": true,
+
+  "[kotlin]": {
+    "editor.defaultFormatter": "fwcd.kotlin",
+    "editor.formatOnSave": true,
+
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+
+    "editor.semanticHighlighting.enabled": true,
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active"
+  },
+
+  // ------------------------------------------------------------
+  // FILE EXCLUSIONS
+  // ------------------------------------------------------------
+  //
+  // Keep generated / enormous / irrelevant directories out of
+  // Explorer, Search and file watching.
+  //
+  // These exclusions do NOT delete anything.
+  //
+
+  "files.exclude": {
+    "**/.kilo": true,
+    "**/_archive": true,
+    "**/.cxx": true,
+    "**/.gradle": true,
+
+    "**/node_modules": true,
+
+    "**/android/**/build": true,
+    "**/android/**/.cxx": true,
+
+    "**/.expo": true,
+    "**/.turbo": true,
+
+    "**/*.log": true
+  },
+
+  "search.exclude": {
+    "**/.kilo": true,
+    "**/_archive": true,
+
+    "**/.cxx": true,
+    "**/.gradle": true,
+
+    "**/node_modules": true,
+
+    "**/android/**/build": true,
+    "**/android/**/.cxx": true,
+
+    "**/.expo": true,
+    "**/.turbo": true,
+
+    "**/*.log": true
+  },
+
+  "files.watcherExclude": {
+    "**/.kilo/**": true,
+    "**/_archive/**": true,
+
+    "**/.cxx/**": true,
+    "**/.gradle/**": true,
+
+    "**/node_modules/**": true,
+
+    "**/android/**/build/**": true,
+    "**/android/**/.cxx/**": true,
+
+    "**/.expo/**": true,
+    "**/.turbo/**": true
+  },
+
+  // ------------------------------------------------------------
+  // FILE HANDLING
+  // ------------------------------------------------------------
+
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // Do not silently change line endings across the project.
+  "files.eol": "\n",
+
+  // ------------------------------------------------------------
+  // SEARCH
+  // ------------------------------------------------------------
+
+  "search.followSymlinks": false,
+  "search.useIgnoreFiles": true,
+
+  // ------------------------------------------------------------
+  // EXPLORER
+  // ------------------------------------------------------------
+
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+
+  // ------------------------------------------------------------
+  // TERMINAL
+  // ------------------------------------------------------------
+
+  "terminal.integrated.fontFamily": "'Fira Code', 'JetBrains Mono', Menlo, monospace",
+  "terminal.integrated.fontLigatures.enabled": true,
+
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.smoothScrolling": true,
+
+  "terminal.integrated.scrollback": 10000,
+
+  "terminal.integrated.defaultProfile.osx": "zsh",
+
+  // ------------------------------------------------------------
+  // GIT
+  // ------------------------------------------------------------
+
+  "git.enableSmartCommit": false,
+  "git.confirmSync": true,
+  "git.autofetch": true,
+
+  // Avoid noisy automatic repository discovery in large projects.
+  "git.autoRepositoryDetection": true,
+
+  // ------------------------------------------------------------
+  // DIFF / SOURCE CONTROL
+  // ------------------------------------------------------------
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ------------------------------------------------------------
+  // DEBUGGING
+  // ------------------------------------------------------------
+
+  "debug.openDebug": "openOnDebugBreak",
+
+  // ------------------------------------------------------------
+  // ACCESSIBILITY / UI
+  // ------------------------------------------------------------
+
+  "window.commandCenter": true,
+  "window.titleBarStyle": "custom",
+
+  // ------------------------------------------------------------
+  // BRAND PALETTE — LOCKED
+  // Same values as Setu brand palette.
+  // ------------------------------------------------------------
+
+  "workbench.colorCustomizations": {
+    "[Monokai]": {
+      "focusBorder": "#DA704966",
+
+      "foreground": "#BCB8B3",
+      "descriptionForeground": "#989490",
+
+      "selection.background": "#4A4945",
+      "textLink.foreground": "#E28F50",
+      "textLink.activeForeground": "#DA7049",
+
+      "editor.background": "#262624",
+      "editor.foreground": "#F7F5F3",
+
+      "editorCursor.foreground": "#DA7049",
+
+      "editor.lineHighlightBackground": "#30302E",
+      "editor.lineHighlightBorder": "#00000000",
+
+      "editor.selectionBackground": "#4A4945",
+      "editor.inactiveSelectionBackground": "#4A494588",
+
+      "editor.selectionHighlightBackground": "#7AC1CD1A",
+      "editor.wordHighlightBackground": "#7AC1CD22",
+      "editor.wordHighlightStrongBackground": "#ABC57722",
+
+      "editor.findMatchBackground": "#E8C87D55",
+      "editor.findMatchBorder": "#E8C87D",
+      "editor.findMatchHighlightBackground": "#E8C87D22",
+
+      "editorLineNumber.foreground": "#7A7571",
+      "editorLineNumber.activeForeground": "#E28F50",
+
+      "editorIndentGuide.background1": "#30302E",
+      "editorIndentGuide.activeBackground1": "#989490",
+
+      "editorWhitespace.foreground": "#42413D",
+      "editorRuler.foreground": "#3A3935",
+      "editorGhostText.foreground": "#989490",
+
+      "editorError.foreground": "#E8738A",
+      "editorWarning.foreground": "#E28F50",
+      "editorInfo.foreground": "#7AC1CD",
+
+      "editorBracketHighlight.foreground1": "#DA7049",
+      "editorBracketHighlight.foreground2": "#ABC577",
+      "editorBracketHighlight.foreground3": "#7AC1CD",
+      "editorBracketHighlight.foreground4": "#E28F50",
+      "editorBracketHighlight.foreground5": "#E8738A",
+      "editorBracketHighlight.foreground6": "#E8C87D",
+
+      "editorBracketMatch.border": "#ABC577",
+
+      "editorGutter.background": "#262624",
+
+      "editorWidget.background": "#30302E",
+      "editorWidget.border": "#3A3935",
+
+      "editorSuggestWidget.background": "#30302E",
+      "editorSuggestWidget.selectedBackground": "#3A3935",
+
+      "editorHoverWidget.background": "#30302E",
+
+      "editorGroupHeader.tabsBackground": "#1F1E1D",
+
+      "tab.activeBackground": "#262624",
+      "tab.activeForeground": "#F7F5F3",
+      "tab.activeBorderTop": "#DA7049",
+
+      "tab.inactiveBackground": "#1F1E1D",
+      "tab.inactiveForeground": "#989490",
+      "tab.border": "#1F1E1D",
+
+      "activityBar.background": "#1F1E1D",
+      "activityBar.foreground": "#F7F5F3",
+      "activityBar.inactiveForeground": "#7A7571",
+      "activityBar.activeBorder": "#DA7049",
+
+      "activityBarBadge.background": "#DA7049",
+      "activityBarBadge.foreground": "#1F1E1D",
+
+      "sideBar.background": "#1F1E1D",
+      "sideBar.foreground": "#BCB8B3",
+      "sideBar.border": "#30302E",
+
+      "sideBarTitle.foreground": "#F7F5F3",
+      "sideBarSectionHeader.background": "#262624",
+
+      "list.activeSelectionBackground": "#3A3935",
+      "list.activeSelectionForeground": "#F7F5F3",
+
+      "list.inactiveSelectionBackground": "#30302E",
+      "list.hoverBackground": "#30302E",
+
+      "list.highlightForeground": "#DA7049",
+
+      "statusBar.background": "#1F1E1D",
+      "statusBar.foreground": "#BCB8B3",
+      "statusBar.border": "#30302E",
+
+      "statusBar.debuggingBackground": "#E28F50",
+      "statusBar.debuggingForeground": "#1F1E1D",
+
+      "statusBarItem.remoteBackground": "#DA7049",
+      "statusBarItem.remoteForeground": "#1F1E1D",
+
+      "titleBar.activeBackground": "#1F1E1D",
+      "titleBar.activeForeground": "#BCB8B3",
+
+      "titleBar.inactiveBackground": "#1F1E1D",
+
+      "panel.background": "#1F1E1D",
+      "panel.border": "#30302E",
+
+      "panelTitle.activeBorder": "#DA7049",
+      "panelTitle.activeForeground": "#F7F5F3",
+
+      "terminal.background": "#1F1E1D",
+      "terminal.foreground": "#F7F5F3",
+      "terminalCursor.foreground": "#DA7049",
+
+      "terminal.ansiBlack": "#30302E",
+      "terminal.ansiRed": "#E8738A",
+      "terminal.ansiGreen": "#ABC577",
+      "terminal.ansiYellow": "#E8C87D",
+      "terminal.ansiBlue": "#7AC1CD",
+      "terminal.ansiMagenta": "#DA7049",
+      "terminal.ansiCyan": "#7AC1CD",
+      "terminal.ansiWhite": "#BCB8B3",
+
+      "terminal.ansiBrightBlack": "#989490",
+      "terminal.ansiBrightRed": "#EF9FAF",
+      "terminal.ansiBrightGreen": "#C1D49B",
+      "terminal.ansiBrightYellow": "#E8C87D",
+      "terminal.ansiBrightBlue": "#7AC1CD",
+      "terminal.ansiBrightMagenta": "#E28F50",
+      "terminal.ansiBrightCyan": "#7AC1CD",
+      "terminal.ansiBrightWhite": "#F7F5F3",
+
+      "input.background": "#30302E",
+      "input.border": "#3A3935",
+
+      "dropdown.background": "#30302E",
+
+      "button.background": "#DA7049",
+      "button.foreground": "#1F1E1D",
+      "button.hoverBackground": "#E28F50",
+
+      "badge.background": "#DA7049",
+      "badge.foreground": "#1F1E1D",
+
+      "progressBar.background": "#DA7049",
+
+      "scrollbarSlider.background": "#98949033",
+      "scrollbarSlider.hoverBackground": "#98949055",
+      "scrollbarSlider.activeBackground": "#98949077",
+
+      "gitDecoration.modifiedResourceForeground": "#E8C87D",
+      "gitDecoration.untrackedResourceForeground": "#ABC577",
+      "gitDecoration.deletedResourceForeground": "#E8738A"
+    }
+  },
+
+  // ------------------------------------------------------------
+  // SYNTAX COLORS
+  // ------------------------------------------------------------
+
+  "editor.tokenColorCustomizations": {
+    "[Monokai]": {
+      "comments": "#989490",
+      "strings": "#E8C87D",
+      "numbers": "#E8738A",
+      "keywords": "#DA7049",
+      "functions": "#ABC577",
+      "types": "#7AC1CD",
+      "variables": "#F7F5F3",
+
+      "textMateRules": [
+        {
+          "scope": "comment",
+          "settings": {
+            "foreground": "#989490",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": ["keyword", "storage", "storage.type", "keyword.operator"],
+          "settings": {
+            "foreground": "#DA7049"
+          }
+        },
+        {
+          "scope": [
+            "constant.numeric",
+            "constant.language",
+            "constant.character",
+            "constant.other"
+          ],
+          "settings": {
+            "foreground": "#E8738A"
+          }
+        },
+        {
+          "scope": ["string", "string.regexp"],
+          "settings": {
+            "foreground": "#E8C87D"
+          }
+        },
+        {
+          "scope": ["entity.name.function", "support.function", "meta.function-call"],
+          "settings": {
+            "foreground": "#ABC577"
+          }
+        },
+        {
+          "scope": ["entity.name.type", "entity.name.class", "support.type", "support.class"],
+          "settings": {
+            "foreground": "#7AC1CD",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": ["variable.parameter"],
+          "settings": {
+            "foreground": "#E28F50",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": ["entity.name.tag"],
+          "settings": {
+            "foreground": "#DA7049"
+          }
+        },
+        {
+          "scope": ["entity.other.attribute-name"],
+          "settings": {
+            "foreground": "#ABC577"
+          }
+        },
+        {
+          "scope": ["punctuation", "meta.brace"],
+          "settings": {
+            "foreground": "#BCB8B3"
+          }
+        }
+      ]
+    }
+  }
+}
